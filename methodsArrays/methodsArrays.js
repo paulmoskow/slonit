@@ -20,7 +20,7 @@ function mySlice(arr, start, end) {
     newArrayStart = arr.length + start;
   }
 
-  if (!end) {
+  if (!end || end > arr.length) {
     newArrayEnd = arr.length;
   } else if (end > 0) {
     newArrayEnd = end;
@@ -42,4 +42,8 @@ function mySlice(arr, start, end) {
   return newArray;
 }
 
+let test = ["t", "e", "s", "t", "t", "e", "s", "t"];
+let wrong = 2;
+
+console.log(mySlice(test, 1, 13));
 
