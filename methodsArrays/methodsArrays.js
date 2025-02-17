@@ -42,8 +42,50 @@ function mySlice(arr, start, end) {
   return newArray;
 }
 
-let test = ["t", "e", "s", "t", "t", "e", "s", "t"];
-let wrong = 2;
 
-console.log(mySlice(test, 1, 13));
+function myIndexOf(arr, item, from) {
+  //проверка аргумента на массив
+  if (!Array.isArray(arr)) {
+    console.log(`${arr} не является массивом`);
+    return;
+  }
+
+  const indexToStartSearch = from || 0;
+
+  for (
+    let i = indexToStartSearch;
+    i < arr.length;
+    i++
+  ) {
+    if (arr[i] === item) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+
+function myIncludes(arr, item, from) {
+  //проверка аргумента на массив
+  if (!Array.isArray(arr)) {
+    console.log(`${arr} не является массивом`);
+    return;
+  }
+
+  const indexToStartSearch = from || 0;
+
+  for (
+    let i = indexToStartSearch;
+    i < arr.length;
+    i++
+  ) {
+    if (arr[i] === item) {
+      return true;
+    }
+  }
+  return false;
+}
+
+
 
