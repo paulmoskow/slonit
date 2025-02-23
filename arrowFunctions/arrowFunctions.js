@@ -2,9 +2,12 @@
 
 function myFilter(arr, fn) {
   let newArr = [];
+  let index = 0;
+
   for (let item of arr) {
     if (fn(item)) {
-      newArr.push(item);
+      newArr[index] = item;
+      index++;
     }
   }
   return newArr;
